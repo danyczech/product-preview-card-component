@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+$primary-dark: hsl(158, 36%, 37%);
+$primary-light: hsl(30, 38%, 92%);
+$neutral-dark: hsl(212, 21%, 14%);
+$neutral-darkish: hsl(228, 12%, 48%);
+$neutral-white: hsl(0, 0%, 100%);
+
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+main {
+  background-color: $primary-light;
+  padding: 2rem;
+}
+
+.card {
+  background-color: $neutral-white;
+  max-width: 350px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.card__photo-mobile {
+  img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.card__text {
+  //margin: 1rem;
+  padding: 1rem 2rem 2rem 2rem;
+
+  h2 {
+    font-family: "Fraunces", serif;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+
+  h3 {
+    font-size: 0.7rem;
+    color: $neutral-dark;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: normal;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+
+  &-new {
+    font-family: "Fraunces", serif;
+    color: $primary-dark;
+    font-size: 2rem;
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  &-old {
+    text-decoration: line-through;
+  }
+}
+
+.card__btn {
+  border: none;
+  border-radius: 10px;
+  color: $neutral-white;
+  font-weight: bold;
+  background-color: $primary-dark;
+  padding: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+
+  svg {
+    margin-right: 0.3rem;
+    vertical-align: sub;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
 $primary-dark: hsl(158, 36%, 37%);
+$primary-darker: hsl(158, 96%, 22%); //for hoovering the $primary-dark
 $primary-light: hsl(30, 38%, 92%);
 $neutral-dark: hsl(212, 21%, 14%);
 $neutral-darkish: hsl(228, 12%, 48%);
@@ -21,7 +22,7 @@ body {
 
 main {
   background-color: $primary-light;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .card {
@@ -41,17 +42,18 @@ main {
 
 .card__text {
   //margin: 1rem;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 0.8rem 1.6rem 1.6rem 1.6rem;
+  color: $neutral-darkish;
 
   h2 {
     font-family: "Fraunces", serif;
     font-size: 1.8rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
+    color: $neutral-dark;
   }
 
   h3 {
     font-size: 0.7rem;
-    color: $neutral-dark;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: normal;
@@ -63,14 +65,16 @@ main {
 }
 
 .card__price {
-  display: flex;
-  align-items: center;
+  p {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
   &-new {
     font-family: "Fraunces", serif;
     color: $primary-dark;
     font-size: 2rem;
-    margin: 1rem 1rem 1rem 0;
+    margin: 0.3rem 1rem 0.7rem 0;
   }
 
   &-old {
@@ -88,6 +92,10 @@ main {
   cursor: pointer;
   display: inline-block;
   width: 100%;
+
+  &:hover {
+    background-color: $primary-darker;
+  }
 
   svg {
     margin-right: 0.3rem;

@@ -13,7 +13,7 @@ body {
 
 main {
   background-color: hsl(30deg, 38%, 92%);
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .card {
@@ -30,16 +30,17 @@ main {
 }
 
 .card__text {
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 0.8rem 1.6rem 1.6rem 1.6rem;
+  color: hsl(228deg, 12%, 48%);
 }
 .card__text h2 {
   font-family: "Fraunces", serif;
   font-size: 1.8rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  color: hsl(212deg, 21%, 14%);
 }
 .card__text h3 {
   font-size: 0.7rem;
-  color: hsl(212deg, 21%, 14%);
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: normal;
@@ -48,15 +49,15 @@ main {
   line-height: 1.5;
 }
 
-.card__price {
-  display: flex;
-  align-items: center;
+.card__price p {
+  display: inline-block;
+  vertical-align: middle;
 }
 .card__price-new {
   font-family: "Fraunces", serif;
   color: hsl(158deg, 36%, 37%);
   font-size: 2rem;
-  margin: 1rem 1rem 1rem 0;
+  margin: 0.3rem 1rem 0.7rem 0;
 }
 .card__price-old {
   text-decoration: line-through;
@@ -72,6 +73,9 @@ main {
   cursor: pointer;
   display: inline-block;
   width: 100%;
+}
+.card__btn:hover {
+  background-color: hsl(158deg, 96%, 22%);
 }
 .card__btn svg {
   margin-right: 0.3rem;

@@ -28,6 +28,10 @@ main {
   padding: 2rem 1rem;
 }
 
+h1 {
+  display: none;
+}
+
 //container of the card, gives the size of the component - max-width 350px for mobile, 500px&375px for desktop, changes to flexbox for desktop version (displaying photo and text parts in a row, each of them takes 50% of card container)
 .card {
   background-color: $neutral-white;
@@ -140,7 +144,8 @@ main {
   display: inline-block;
   width: 100%;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $primary-darker;
   }
 

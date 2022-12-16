@@ -13,6 +13,10 @@ main {
   padding: 2rem 1rem;
 }
 
+h1 {
+  display: none;
+}
+
 .card {
   background-color: hsl(0deg, 0%, 100%);
   max-width: 350px;
@@ -111,7 +115,7 @@ main {
   display: inline-block;
   width: 100%;
 }
-.card__btn:hover {
+.card__btn:hover, .card__btn:focus {
   background-color: hsl(158deg, 96%, 22%);
 }
 .card__btn svg {

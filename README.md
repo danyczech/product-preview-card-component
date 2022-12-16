@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://danyczech.github.io/product-preview-card-component/)
+- Solution URL: [https://danyczech.github.io/product-preview-card-component/](https://danyczech.github.io/product-preview-card-component/)
 
 ## My process
 

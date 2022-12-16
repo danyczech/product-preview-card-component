@@ -66,6 +66,5 @@ Just dropping there for the future some useful text properties.
 
 ## Author
 
-- Website - [On my github](https://danyczech.github.io/product-preview-card-component/)
 - Frontend Mentor - [@danyczech](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@danyczech](https://www.twitter.com/yourusername)

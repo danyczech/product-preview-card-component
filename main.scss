@@ -82,14 +82,14 @@ h1 {
   padding: 0.8rem 1.6rem 1.6rem 1.6rem;
   color: $neutral-darkish;
 
-  h2 {
+  h3 {
     font-family: "Fraunces", serif;
     font-size: 1.8rem;
     margin: 0.5rem 0;
     color: $neutral-dark;
   }
 
-  h3 {
+  h2 {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -104,7 +104,7 @@ h1 {
     flex-basis: 50%;
     flex-shrink: 0;
 
-    h2 {
+    h3 {
       font-size: 2rem;
       line-height: 2rem;
       margin: 1rem 0;

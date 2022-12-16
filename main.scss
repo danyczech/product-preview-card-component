@@ -1,5 +1,8 @@
+//importing fonts from Google
+
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
+// setting variables - colors and breaking point
 $primary-dark: hsl(158, 36%, 37%);
 $primary-darker: hsl(158, 96%, 22%); //for hoovering the $primary-dark
 $primary-light: hsl(30, 38%, 92%);
@@ -7,9 +10,9 @@ $neutral-dark: hsl(212, 21%, 14%);
 $neutral-darkish: hsl(228, 12%, 48%);
 $neutral-white: hsl(0, 0%, 100%);
 
-/*
-font-family: 'Fraunces', serif;
-font-family: 'Montserrat', sans-serif;*/
+$break-point: 768px; //setting the breaking point between mobile and desktop display
+
+// START of the SCSS styling
 
 * {
   box-sizing: border-box;
@@ -25,20 +28,21 @@ main {
   padding: 2rem 1rem;
 }
 
+//container of the card, gives the size of the component - max-width 350px for mobile, 500px&375px for desktop, changes to flexbox for desktop version (displaying photo and text parts in a row, each of them takes 50% of card container)
 .card {
   background-color: $neutral-white;
   max-width: 350px;
   border-radius: 10px;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: $break-point) {
     display: flex;
-    //align-items: center;
     max-width: 500px;
     height: 375px;
   }
 }
 
+//photo for mobile version, is not displayed in desktop version
 .card__photo-mobile {
   img {
     display: inline-block;
@@ -46,14 +50,16 @@ main {
     border-radius: 10px 10px 0 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $break-point) {
     display: none;
   }
 }
 
+//photo for desktop version, is not displayed in mobile version, takes 50% of the card - flexbox
 .card__photo-desktop {
   display: none;
-  @media (min-width: 768px) {
+
+  @media (min-width: $break-point) {
     display: block;
     flex-basis: 50%;
     flex-shrink: 0;
@@ -65,8 +71,9 @@ main {
   }
 }
 
+// START - CARD COMPONENT
+//container for the text part of the component, takes 50% of the card in desktop version - flexbox, includes the styling for texts in the componet
 .card__text {
-  //margin: 1rem;
   padding: 0.8rem 1.6rem 1.6rem 1.6rem;
   color: $neutral-darkish;
 
@@ -84,7 +91,11 @@ main {
     font-weight: normal;
   }
 
-  @media (min-width: 768px) {
+  .card__description {
+    line-height: 1.5;
+  }
+
+  @media (min-width: $break-point) {
     flex-basis: 50%;
     flex-shrink: 0;
 
@@ -92,16 +103,13 @@ main {
       line-height: 1.7rem;
     }
 
-    p {
+    .card__description {
       line-height: 1.4;
     }
   }
 }
 
-.card__description {
-  line-height: 1.5;
-}
-
+// displays prices in a row, fully responsive, special styling for price texts
 .card__price {
   p {
     display: inline-block;
@@ -120,12 +128,13 @@ main {
   }
 }
 
+// button styling
 .card__btn {
+  color: $neutral-white;
+  background-color: $primary-dark;
   border: none;
   border-radius: 10px;
-  color: $neutral-white;
   font-weight: bold;
-  background-color: $primary-dark;
   padding: 1rem;
   cursor: pointer;
   display: inline-block;
@@ -139,15 +148,18 @@ main {
     margin-right: 0.3rem;
     vertical-align: sub;
   }
-  @media (min-width: 768px) {
+
+  @media (min-width: $break-point) {
     padding: 0.8rem;
   }
 }
+// END - CARD COMPONENT
 
+//footer part
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $neutral-dark;
 }

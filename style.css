@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
-/*
-font-family: 'Fraunces', serif;
-font-family: 'Montserrat', sans-serif;*/
 * {
   box-sizing: border-box;
 }
@@ -73,6 +70,9 @@ main {
   letter-spacing: 4px;
   font-weight: normal;
 }
+.card__text .card__description {
+  line-height: 1.5;
+}
 @media (min-width: 768px) {
   .card__text {
     flex-basis: 50%;
@@ -81,13 +81,9 @@ main {
   .card__text h2 {
     line-height: 1.7rem;
   }
-  .card__text p {
+  .card__text .card__description {
     line-height: 1.4;
   }
-}
-
-.card__description {
-  line-height: 1.5;
 }
 
 .card__price p {
@@ -105,11 +101,11 @@ main {
 }
 
 .card__btn {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(158deg, 36%, 37%);
   border: none;
   border-radius: 10px;
-  color: hsl(0deg, 0%, 100%);
   font-weight: bold;
-  background-color: hsl(158deg, 36%, 37%);
   padding: 1rem;
   cursor: pointer;
   display: inline-block;
@@ -134,7 +130,7 @@ main {
 }
 
 .attribution a {
-  color: hsl(228deg, 45%, 44%);
+  color: hsl(212deg, 21%, 14%);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,7 +14,7 @@ main {
 }
 
 h1 {
-  display: none;
+  color: hsl(30deg, 38%, 92%);
 }
 
 .card {
@@ -26,8 +26,9 @@ h1 {
 @media (min-width: 768px) {
   .card {
     display: flex;
-    max-width: 500px;
-    height: 375px;
+    max-width: 550px;
+    height: 412px;
+    margin: 5rem auto;
   }
 }
 
@@ -83,10 +84,9 @@ h1 {
     flex-shrink: 0;
   }
   .card__text h2 {
-    line-height: 1.7rem;
-  }
-  .card__text .card__description {
-    line-height: 1.4;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 1rem 0;
   }
 }
 
@@ -125,6 +125,7 @@ h1 {
 @media (min-width: 768px) {
   .card__btn {
     padding: 0.8rem;
+    margin-top: 1rem;
   }
 }
 

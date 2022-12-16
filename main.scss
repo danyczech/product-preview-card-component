@@ -29,10 +29,10 @@ main {
 }
 
 h1 {
-  display: none;
+  color: $primary-light;
 }
 
-//container of the card, gives the size of the component - max-width 350px for mobile, 500px&375px for desktop, changes to flexbox for desktop version (displaying photo and text parts in a row, each of them takes 50% of card container)
+//container of the card, gives the size of the component - max-width 350px for mobile, 550px&412px for desktop, changes to flexbox for desktop version (displaying photo and text parts in a row, each of them takes 50% of card container)
 .card {
   background-color: $neutral-white;
   max-width: 350px;
@@ -41,8 +41,9 @@ h1 {
 
   @media (min-width: $break-point) {
     display: flex;
-    max-width: 500px;
-    height: 375px;
+    max-width: 550px;
+    height: 412px;
+    margin: 5rem auto;
   }
 }
 
@@ -104,11 +105,9 @@ h1 {
     flex-shrink: 0;
 
     h2 {
-      line-height: 1.7rem;
-    }
-
-    .card__description {
-      line-height: 1.4;
+      font-size: 2rem;
+      line-height: 2rem;
+      margin: 1rem 0;
     }
   }
 }
@@ -156,6 +155,7 @@ h1 {
 
   @media (min-width: $break-point) {
     padding: 0.8rem;
+    margin-top: 1rem;
   }
 }
 // END - CARD COMPONENT

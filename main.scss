@@ -10,7 +10,7 @@ $neutral-dark: hsl(212, 21%, 14%);
 $neutral-darkish: hsl(228, 12%, 48%);
 $neutral-white: hsl(0, 0%, 100%);
 
-$break-point: 768px; //setting the breaking point between mobile and desktop display
+$break-point: 768px; //setting the breaking point between mobile and desktop display, ALLERT!!! connected to html code - <picture> element - if changed here, it is necessary to change it in html part too
 
 // START of the SCSS styling
 
@@ -31,21 +31,40 @@ main {
 h1 {
   color: $primary-light;
 }
+// START - CARD COMPONENT
 
-//container of the card, gives the size of the component - max-width 350px for mobile, 550px&412px for desktop, changes to flexbox for desktop version (displaying photo and text parts in a row, each of them takes 50% of card container)
+//container of the card, gives the size of the component - max-width 350px for mobile, 550px&412px for desktop
 .card {
   background-color: $neutral-white;
   max-width: 350px;
   border-radius: 10px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: $break-point) {
-    display: flex;
     max-width: 550px;
     height: 412px;
-    margin: 5rem auto;
   }
 }
+
+// photo, html element <picture> connected to this class switches between pictures for mobile/desktop version
+.card__photo {
+  img {
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  @media (min-width: $break-point) {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    img {
+      border-radius: 10px 0 0 10px;
+    }
+  }
+}
+/*old version for commented html part - just to know, how not to do it in the future :-)
 
 //photo for mobile version, is not displayed in desktop version
 .card__photo-mobile {
@@ -75,8 +94,8 @@ h1 {
     }
   }
 }
+*/
 
-// START - CARD COMPONENT
 //container for the text part of the component, takes 50% of the card in desktop version - flexbox, includes the styling for texts in the componet
 .card__text {
   padding: 0.8rem 1.6rem 1.6rem 1.6rem;

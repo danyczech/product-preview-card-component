@@ -57,7 +57,24 @@ letter-spacing: 4px;
 line-height: 1.4;
 ```
 
-Just dropping there for the future some useful text properties.
+Just dropping there some properties for the future.
+
+```html
+<picture class="card__photo">
+  <source
+    media="(max-width:767px)"
+    srcset="./images/image-product-mobile.jpg"
+  />
+  <source
+    media="(min-width:768px)"
+    srcset="./images/image-product-desktop.jpg"
+  />
+  <img src="./images/image-product-mobile.jpg" alt="photo Chanel parfum" />
+</picture>
+```
+
+Completely forgotten concept from my HTML course. This clever thing switches between different images according to your screen size.
+So you can save time&money to the customers if you use smaller images in the code for mobiles. In CSS you just style <img> element.
 
 ### Useful resources
 

@@ -21,44 +21,63 @@ h1 {
   background-color: hsl(0deg, 0%, 100%);
   max-width: 350px;
   border-radius: 10px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .card {
-    display: flex;
     max-width: 550px;
     height: 412px;
-    margin: 5rem auto;
   }
 }
 
-.card__photo-mobile img {
-  display: inline-block;
+.card__photo img {
+  display: block;
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
 @media (min-width: 768px) {
-  .card__photo-mobile {
-    display: none;
-  }
-}
-
-.card__photo-desktop {
-  display: none;
-}
-@media (min-width: 768px) {
-  .card__photo-desktop {
-    display: block;
+  .card__photo {
     flex-basis: 50%;
     flex-shrink: 0;
   }
-  .card__photo-desktop img {
-    display: block;
-    width: 100%;
+  .card__photo img {
     border-radius: 10px 0 0 10px;
   }
 }
 
+/*old version for commented html part - just to know, how not to do it in the future :-)
+
+//photo for mobile version, is not displayed in desktop version
+.card__photo-mobile {
+  img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  @media (min-width: $break-point) {
+    display: none;
+  }
+}
+
+//photo for desktop version, is not displayed in mobile version, takes 50% of the card - flexbox
+.card__photo-desktop {
+  display: none;
+
+  @media (min-width: $break-point) {
+    display: block;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 10px 0 0 10px;
+    }
+  }
+}
+*/
 .card__text {
   padding: 0.8rem 1.6rem 1.6rem 1.6rem;
   color: hsl(228deg, 12%, 48%);

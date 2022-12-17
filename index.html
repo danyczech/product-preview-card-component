@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -19,7 +17,22 @@
     <main>
       <h1>Card Component</h1>
       <section class="card">
-        <div class="card__photo-mobile">
+        <picture class="card__photo">
+          <source
+            media="(max-width:767px)"
+            srcset="./images/image-product-mobile.jpg"
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="./images/image-product-desktop.jpg"
+          />
+          <img
+            src="./images/image-product-mobile.jpg"
+            alt="photo Chanel parfum"
+          />
+        </picture>
+        <!-- old version just to know, how not to do it :-)
+          <div class="card__photo-mobile">
           <img
             src="./images/image-product-mobile.jpg"
             alt="photo Chanel parfum"
@@ -30,7 +43,7 @@
             src="./images/image-product-desktop.jpg"
             alt="photo Chanel parfum"
           />
-        </div>
+        </div> -->
         <div class="card__text">
           <h2>Perfume</h2>
           <h3>Gabrielle Essence Eau De Parfum</h3>
